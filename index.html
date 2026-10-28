@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción Curso</title>
+
+    <!-- Google Font: Betania Patmos -->
+    <link href='https://fonts.googleapis.com/css?family=Betania Patmos' rel='stylesheet'>
+
+    <!-- Conectar el archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div class="formulario">
+
+        <header class="encabezado">
+            <h1>Formulario de Inscripción Curso</h1>
+            <p>Rellene cuidadosamente el formulario de inscripción</p>
+        </header>
+
+        <form id="formulario" action="#" method="post">
+
+            <!-- Nombre del alumno -->
+            <div class="grupo">
+                <span class="etiqueta">Nombre del alumno</span>
+
+                <div class="fila-tres">
+                    <div>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <small class="ayuda">Nombre</small>
+                    </div>
+
+                    <div>
+                        <input type="text" id="segundo_nombre" name="segundo_nombre">
+                        <small class="ayuda">Segundo Nombre</small>
+                    </div>
+
+                    <div>
+                        <input type="text" id="apellido" name="apellido" required>
+                        <small class="ayuda">Apellido</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fecha y género -->
+            <div class="grupo">
+                <div class="fila">
+                    <div>
+                        <label for="fecha">Fecha de nacimiento</label>
+                        <input type="date" id="fecha" name="fecha_nacimiento" required>
+                        <small class="ayuda">Fecha</small>
+                    </div>
+
+                    <div>
+                        <label for="genero">Género</label>
+                        <select id="genero" name="genero" required>
+                            <option value=""></option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                            <option value="no_indica">Prefiero no indicarlo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dirección -->
+            <div class="grupo">
+                <label for="direccion">Dirección</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <small class="ayuda">Dirección de la calle</small>
+            </div>
+
+            <div class="grupo">
+                <input type="text" id="direccion2" name="direccion2">
+                <small class="ayuda">Dirección de la calle Línea 2</small>
+            </div>
+
+            <div class="grupo">
+                <div class="fila">
+                    <div>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                        <small class="ayuda">Ciudad</small>
+                    </div>
+
+                    <div>
+                        <input type="text" id="provincia" name="provincia" required>
+                        <small class="ayuda">Estado / Provincia</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grupo">
+                <input class="codigo-postal" type="text" id="codigo_postal" name="codigo_postal" inputmode="numeric">
+                <small class="ayuda">Código Postal</small>
+            </div>
+
+            <!-- Contacto -->
+            <div class="grupo">
+                <div class="fila">
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="telefono">Número de teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cursos anteriores -->
+            <div class="grupo">
+                <span class="etiqueta">
+                    Ha recibido otros cursos anteriormente
+                </span>
+
+                <div class="opciones">
+                    <label>
+                        <input type="radio" name="cursos_anteriores" value="si">
+                        Sí
+                    </label>
+
+                    <label>
+                        <input type="radio" name="cursos_anteriores" value="no">
+                        No
+                    </label>
+                </div>
+            </div>
+
+            <!-- Empresa y cursos -->
+            <div class="grupo">
+                <div class="fila">
+                    <div>
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+
+                    <div>
+                        <label for="curso">Cursos</label>
+                        <select id="curso" name="curso" required>
+                            <option value=""></option>
+                            <option value="html">HTML y CSS</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="diseno">Diseño gráfico</option>
+                            <option value="ofimatica">Ofimática</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentarios -->
+            <div class="grupo">
+                <label for="comentarios">Comentarios adicionales</label>
+                <textarea id="comentarios" name="comentarios"></textarea>
+            </div>
+
+            <div class="pie">
+                <button type="submit">Enviar</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("formulario").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+                alert("Formulario enviado correctamente.");
+            }
+        );
+    </script>
+
+</body>
+
+</html>

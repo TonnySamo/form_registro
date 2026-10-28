@@ -1,0 +1,180 @@
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f3ef;
+    color: #222;
+}
+
+/* Contenedor del formulario */
+.formulario {
+    max-width: 430px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #e5e5e5;
+}
+
+/* Encabezado */
+.encabezado {
+    text-align: center;
+    padding: 18px 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.encabezado h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 6px;
+}
+
+.encabezado p {
+    font-size: 10px;
+    margin: 0;
+}
+
+/* Formulario */
+form {
+    padding: 18px 26px 10px;
+}
+
+.grupo {
+    margin-bottom: 10px;
+    min-width: 0;
+}
+
+/* Filas y columnas */
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.fila-tres {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+/* Etiquetas */
+label,
+.etiqueta {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+/* Campos de entrada */
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 7px 8px;
+    border: 1px solid #92999b;
+    border-radius: 4px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 12px;
+    color: #222;
+}
+
+input,
+select {
+    height: 22px;
+    padding: 2px 5px;
+}
+
+/* Efecto al seleccionar un campo */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #20ad66;
+    box-shadow: 0 0 3px #20ad6680;
+}
+
+/* Textos pequeños de ayuda */
+.ayuda {
+    display: block;
+    font-size: 9px;
+    margin-top: 3px;
+    color: #333;
+}
+
+/* Código postal */
+.codigo-postal {
+    width: 72px;
+}
+
+/* Opciones Sí y No */
+.opciones {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.opciones label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    font-size: 11px;
+}
+
+.opciones input {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    accent-color: #20ad66;
+}
+
+/* Comentarios */
+textarea {
+    height: 42px;
+    resize: vertical;
+}
+
+/* Pie y botón */
+.pie {
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 12px;
+}
+
+button {
+    width: 100px;
+    height: 24px;
+    border: none;
+    border-radius: 3px;
+    background-color: #1caf63;
+    color: white;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #168e50;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 360px) {
+    form {
+        padding: 16px;
+    }
+
+    .fila {
+        gap: 8px;
+    }
+
+    .opciones {
+        gap: 65px;
+    }
+}
